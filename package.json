@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/srq18211/vue-dev-aide/issues"
   },
-  "homepage": "https://github.com/srq18211/vue-dev-aide#readme"
+  "homepage": "https://github.com/srq18211/vue-dev-aide#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
