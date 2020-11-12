@@ -10,7 +10,7 @@ export default {
     const { log } = options
     if (log) {
       console.log(
-        `%c Vaide %c ${'version 2.0.6'} %c`,
+        `%c Vaide %c ${'version 2.0.7'} %c`,
         'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
         // 'background:#008c8c ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
         'background:#1890ff ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
