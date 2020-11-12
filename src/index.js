@@ -6,7 +6,8 @@ export default {
     if (process.env.NODE_ENV !== 'development') {
       return
     }
-    // Vue.prototype.$vaide = create(Vaide, router)
+    // Vue.prototype.$vaide =
+    create(Vaide, router)
     const { log } = options
     if (log) {
       console.log(
