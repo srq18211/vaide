@@ -1,14 +1,15 @@
-[English](./README.md) | 简体中文
+English | [简体中文](./README.zh-CN.md)
 
 # Vaide 
-> Vue development aids
+> Vue 开发助手
 ---
 
-## Features
-show currentRoute matched files 
+## 特征
+显示 当前路由 匹配组件，快速定位文件，提升开发效率
+
 ![tupian](http://xinzejy.cn/assets/img/log.png)
 
-## Getting Started
+## 快速上手
 
 ```js
   // in shell
@@ -22,7 +23,7 @@ show currentRoute matched files
 ```
 
 ---
-## Feedback
+## 反馈
 ![tupian](http://xinzejy.cn/assets/img/wechat.jpg)
 ---
 <!-- 
