@@ -3,9 +3,9 @@
   "version": "2.0.10",
   "description": "A programming aid",
   "main": "./src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/srq18211/vue-dev-aide.git"
