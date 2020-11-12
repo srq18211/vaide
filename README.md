@@ -20,6 +20,7 @@ show currentRoute matched files
 ```
 ```js
   // main.js
+  import router from './router/index';
   import Vaide from 'vaide'
   Vue.use(Vaide,router)
 ```
