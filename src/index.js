@@ -10,7 +10,7 @@ export default {
     const { log } = options
     if (log) {
       console.log(
-        `%c Vaide %c ${'version 2.0.5'} %c`,
+        `%c Vaide %c ${'version 2.0.6'} %c`,
         'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
         // 'background:#008c8c ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
         'background:#1890ff ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
@@ -18,15 +18,15 @@ export default {
         'background:transparent'
       )
       router.resolveHooks.push((to, from, next) => {
-        var str = `          ____ Vaide: currentRoute matched ____          \n\n`
+        var str = ``
         to.matched.forEach(item => {
-          str += `【${item.path}】:\n__filePath__: ${item.components.default.__file} \n\n`
+          str += `【${item.path}】:\n__filePath__: ${item.components.default.__file} \n`
         })
-
+        console.groupCollapsed('____ Vaide: currentRoute matched ____ ');
         console.log(`%c${str}`, 'padding:1px;color: #008c8c;text-align:right');
+        console.groupEnd();
         next()
       })
     }
-
   }
 }

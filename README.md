@@ -8,10 +8,6 @@
 show currentRoute matched files 
 ![tupian](http://xinzejy.cn/assets/img/log.png)
 
-### In experiment
-![tupian](http://xinzejy.cn/assets/img/demo2.png)
-
-
 ## Getting Started
 
 ```js
