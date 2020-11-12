@@ -1,4 +1,4 @@
-import create from '@/tools/create';
+import create from './create';
 import Vaide from './vaide.vue';
 
 export default {
