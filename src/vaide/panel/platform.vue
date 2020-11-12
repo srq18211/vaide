@@ -10,23 +10,6 @@
       >开发服务器 pid:{{ data.pid }}
       <!-- <button class="button" @click="restart">重启</button> -->
     </span>
-    <!-- <table class="table">
-      <thead>
-        <tr>
-          <th colspan="2"><h2>node 进程管理</h2></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item, index) in data.process">
-          <td>The table body</td>
-          <td>with two columns</td>
-          <td>
-            <button>重新启动</button>
-            <button>关闭进程</button>
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
   </div>
 </template>
 

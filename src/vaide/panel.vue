@@ -27,26 +27,40 @@
 </template>
 
 <script>
-import context from "./panel/context.js";
-import { contextWithMenus } from "@/tools/importAll.js";
+import platform from './panel/platform';
+import update from './panel/update';
+
 export default {
-  components: { ...context },
-  props: ["visible"],
+  components: {
+    platform,
+    update
+  },
+  props: ['visible'],
   data() {
     return {
-      current: "update",
-      menus: contextWithMenus(context),
-      route: { fullPath: "" },
+      current: 'update',
+      menus: [
+        {
+          'title': '环境',
+          'name': 'platform',
+          'key': 'platform'
+        },
+        {
+          'title': '页面',
+          'name': 'update',
+          'key': 'update'
+        }],
+      route: { fullPath: '' }
     };
   },
   methods: {
     menuItemClick({ key }) {
       this.current = key;
-    },
+    }
   },
   mounted() {
     // this.route = this.$route;
-  },
+  }
 };
 </script>
 
@@ -60,6 +74,7 @@ export default {
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
 }
+
 .devtool-panel {
   border-radius: 10px;
   position: absolute;
@@ -71,23 +86,28 @@ export default {
   overflow: hidden;
   box-shadow: 0 -6px 16px 0 rgba(0, 0, 0, 0.08);
 }
+
 .devtool-panel-sidbar {
   height: 100%;
   float: left;
   background: #272731;
 }
+
 .devtool-panel-menu {
   color: #fff;
 }
+
 .devtool-panel-menu-item {
   padding: 0 10px;
   text-align: center;
   line-height: 50px;
   cursor: pointer;
 }
+
 .devtool-panel-menu .active {
   background: #008c8c;
 }
+
 .devtool-panel-main {
   overflow: hidden;
   background: #2e2e2e;
@@ -96,6 +116,7 @@ export default {
   color: #fff;
   position: relative;
 }
+
 .devtool-panel-footer {
   background: #000;
   color: #fff;
@@ -107,12 +128,14 @@ export default {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 .right-content {
   overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   padding: 20px;
 }
+
 .app-card {
   width: 220px;
   height: 180px;
@@ -122,12 +145,14 @@ export default {
   box-sizing: border-box;
   padding: 10px;
 }
+
 .app-card-body {
   background: #fff;
   height: 100%;
   border-radius: 5px;
   position: relative;
 }
+
 .app-card-body__foot {
   position: absolute;
   bottom: 0;
@@ -139,6 +164,7 @@ export default {
   background: #606266;
   color: #fff;
 }
+
 .devtoolPanel {
   position: absolute;
   width: 100%;

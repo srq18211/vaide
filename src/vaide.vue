@@ -18,13 +18,10 @@ export default {
   components: {
     panel
   },
-  // provide: {
-  //   router: this.router
-  // },
   data() {
     return {
       disabled: false,
-      panelVisible: true
+      panelVisible: false
     };
   },
   methods: {
@@ -37,7 +34,10 @@ export default {
 </script>
 <style scoped>
 * {
-  user-select: none; /* 早期浏览器 */
+  -moz-user-select: none; /* 火狐 */
+  -webkit-user-select: none; /* webkit浏览器 */
+  -ms-user-select: none; /* IE10 */
+  -khtml-user-select: none; /* 早期浏览器 */
 }
 .appDevTools {
   user-select: none;

@@ -17,20 +17,29 @@
 </template>
 
 <script>
-import context from './update/context.js';
+import edit from './update/edit';
+import create from './update/create';
+
 export default {
-  components: { ...context },
+  components: {
+    edit,
+    create
+  },
   name: 'update',
   cname: '页面',
   data() {
     return {
       current: 'edit',
       panes: [
-        ...Object.keys(context).map(key => ({
-          label: context[key].cname,
-          name: context[key].name,
-          key: context[key].name
-        }))
+        {
+          label:'创建',
+          name:'create',
+          key:'create'
+        },{
+          label:'编辑',
+          name:'edit',
+          key:'edit'
+        },
       ]
     };
   },

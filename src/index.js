@@ -1,10 +1,10 @@
-import create from './tools/create'
-import vaide from './vaide.vue'
+import create from '@/tools/create'
+import Vaide from './vaide.vue'
 
 export default {
   install: function (Vue, router) {
-    Vue.prototype.$vaide = create(vaide, { router})
-    
+    Vue.prototype.$vaide = create(Vaide, { router})
+
     console.log(
       `%c Vaide %c ${'Vue DevAide 1.0.0'} %c`,
       'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',

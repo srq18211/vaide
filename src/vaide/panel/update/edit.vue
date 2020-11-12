@@ -26,7 +26,7 @@ export default {
       route: '',
       data: '',
       filePath: '',
-      loading: true
+      loading: false
     };
   },
   created() {
