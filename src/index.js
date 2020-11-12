@@ -1,9 +1,8 @@
-import create from './create'
-import vaide from './src/vaide.vue'
+import create from './tools/create'
+import vaide from './vaide.vue'
 
 export default {
   install: function (Vue, router) {
-
     Vue.prototype.$vaide = create(vaide, { router})
     
     console.log(

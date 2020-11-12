@@ -2,10 +2,13 @@
   "name": "vaide",
   "version": "1.0.2",
   "description": "A programming aid",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/srq18211/vue-dev-aide.git"
@@ -16,7 +19,6 @@
     "url": "https://github.com/srq18211/vue-dev-aide/issues"
   },
   "homepage": "https://github.com/srq18211/vue-dev-aide#readme",
-  "dependencies": {
-    "vue": "^2.6.12"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

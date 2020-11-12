@@ -4,10 +4,11 @@ function create(Component, props) {
   const Ctor = Vue.extend(Component)
   const comp = new Ctor({ propsData: props });
   comp.$mount()
-  document.body.appendChild(comp.$el)
+  const ele = comp.$el
+  document.body.appendChild(ele)
 
   comp.remove = () => {
-    document.body.removeChild(comp.$el);
+    document.body.removeChild(ele);
     comp.$destroy();
   };
   return comp;

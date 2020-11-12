@@ -6,7 +6,6 @@
         X
       </div>
     </div>
-    <!-- </el-tooltip> -->
     <panel v-if="panelVisible" />
   </div>
 </template>
