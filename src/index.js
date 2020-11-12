@@ -6,11 +6,11 @@ export default {
     if (process.env.NODE_ENV !== 'development') {
       return
     }
-    Vue.prototype.$vaide = create(Vaide, router)
+    // Vue.prototype.$vaide = create(Vaide, router)
     const { log } = options
     if (log) {
       console.log(
-        `%c Vaide %c ${'version 2.0.8'} %c`,
+        `%c Vaide %c ${'version 2.0.9'} %c`,
         'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
         // 'background:#008c8c ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
         'background:#1890ff ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
