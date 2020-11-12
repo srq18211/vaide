@@ -17,5 +17,15 @@
   },
   "homepage": "https://github.com/srq18211/vue-dev-aide#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.5",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
 }

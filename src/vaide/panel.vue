@@ -7,7 +7,7 @@
             @click="menuItemClick(item)"
             :class="[
               'devtool-panel-menu-item',
-              item.key === current ? 'active' : ''
+              item.key === current ? 'active' : '',
             ]"
             :index="item.name"
             v-for="(item, index) in menus"
@@ -27,26 +27,26 @@
 </template>
 
 <script>
-import context from './panel/context.js';
-import { contextWithMenus } from '@/tools/importAll.js';
+import context from "./panel/context.js";
+import { contextWithMenus } from "@/tools/importAll.js";
 export default {
   components: { ...context },
-  props: ['visible'],
+  props: ["visible"],
   data() {
     return {
-      current: 'update',
+      current: "update",
       menus: contextWithMenus(context),
-      route: { fullPath: '' }
+      route: { fullPath: "" },
     };
   },
   methods: {
     menuItemClick({ key }) {
       this.current = key;
-    }
+    },
   },
   mounted() {
     // this.route = this.$route;
-  }
+  },
 };
 </script>
 
@@ -121,24 +121,23 @@ export default {
   display: inline-block;
   box-sizing: border-box;
   padding: 10px;
-  &-body {
-    // overflow: hidden;
-    background: #fff;
-    height: 100%;
-    border-radius: 5px;
-    position: relative;
-    &__foot {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 38px;
-      box-sizing: border-box;
-      padding: 8px 12px;
-      background: #606266;
-      color: #fff;
-    }
-  }
+}
+.app-card-body {
+  background: #fff;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+.app-card-body__foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  background: #606266;
+  color: #fff;
 }
 .devtoolPanel {
   position: absolute;
@@ -146,8 +145,5 @@ export default {
   height: 100%;
   left: 0;
   top: 0;
-}
-.el-menu {
-  border-right: none !important;
 }
 </style>
