@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .main_nav {
   width: 100%;
   position: absolute;

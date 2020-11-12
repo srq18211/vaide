@@ -8,6 +8,3 @@ export default {
   cname: '预览'
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

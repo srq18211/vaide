@@ -42,8 +42,6 @@ export default {
   -ms-user-select: none; /* IE10 */
   -khtml-user-select: none; /* 早期浏览器 */
 }
-</style>
-<style lang="scss" scoped>
 .appDevTools {
   user-select: none;
   position: fixed;
@@ -51,37 +49,33 @@ export default {
   height: 60px;
   right: 60px;
   bottom: 60px;
-  // border: 1px solid #000;
   z-index: 9999;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  .logo {
-    // background: #fff url('https://www.vue-js.com/public/images/vue.png');
-    // background-size: 250% 250%;
-    // background-position: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    text-align: center;
-    font-size: 14px;
-  }
-  .close {
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-size: 30px;
-    &::selection {
-      color: #fff;
-    }
-  }
+}
+.appDevTools .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+.appDevTools .close {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+.appDevTools .close::selection {
+  color: #fff;
 }
 </style>

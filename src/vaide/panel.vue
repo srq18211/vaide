@@ -50,64 +50,62 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.devtool {
-  &-masking {
-    position: fixed;
-    z-index: 1024;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.2);
-  }
-  &-panel {
-    border-radius: 10px;
-    position: absolute;
-    bottom: 150px;
-    right: 90px;
-    background: #30303d;
-    width: 70vw;
-    height: calc(95vh - 150px);
-    overflow: hidden;
-    box-shadow: 0 -6px 16px 0 rgba(0, 0, 0, 0.08);
-    &-sidbar {
-      height: 100%;
-      float: left;
-      background: #272731;
-    }
-    &-menu {
-      color: #fff;
-      &-item {
-        padding: 0 10px;
-        text-align: center;
-        line-height: 50px;
-        cursor: pointer;
-      }
-      .active {
-        background: #008c8c;
-      }
-    }
-    &-main {
-      overflow: hidden;
-      background: rgb(46, 46, 46);
-      margin-right: 0;
-      height: 100%;
-      color: #fff;
-      position: relative;
-    }
-    &-footer {
-      background: #000;
-      color: #fff;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-  }
+<style>
+.devtool-masking {
+  position: fixed;
+  z-index: 1024;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.devtool-panel {
+  border-radius: 10px;
+  position: absolute;
+  bottom: 150px;
+  right: 90px;
+  background: #30303d;
+  width: 70vw;
+  height: calc(95vh - 150px);
+  overflow: hidden;
+  box-shadow: 0 -6px 16px 0 rgba(0, 0, 0, 0.08);
+}
+.devtool-panel-sidbar {
+  height: 100%;
+  float: left;
+  background: #272731;
+}
+.devtool-panel-menu {
+  color: #fff;
+}
+.devtool-panel-menu-item {
+  padding: 0 10px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.devtool-panel-menu .active {
+  background: #008c8c;
+}
+.devtool-panel-main {
+  overflow: hidden;
+  background: #2e2e2e;
+  margin-right: 0;
+  height: 100%;
+  color: #fff;
+  position: relative;
+}
+.devtool-panel-footer {
+  background: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .right-content {
   overflow: hidden;
