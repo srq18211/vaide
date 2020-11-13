@@ -8,14 +8,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/srq18211/vue-dev-aide.git"
+    "url": "git+https://github.com/srq18211/vaide.git"
   },
   "author": "xinzejy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/srq18211/vue-dev-aide/issues"
+    "url": "https://github.com/srq18211/vaide/issues"
   },
-  "homepage": "https://github.com/srq18211/vue-dev-aide#readme",
+  "homepage": "https://github.com/srq18211/vaide#readme",
   "dependencies": {},
   "devDependencies": {}
 }
