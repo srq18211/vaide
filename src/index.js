@@ -19,12 +19,12 @@ export default {
       console.clear()
     }
 
-    console.log(
-      `%c Vaide %c ${'version 2.0.14'} %c`,
-      'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
-      'background:#1890ff ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
-      'background:transparent'
-    )
+    // console.log(
+    //   `%c Vaide %c ${'version 2.0.14'} %c`,
+    //   'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    //   'background:#1890ff ; padding: 1px; border-radius: 0 3px 5px 0;  color: #fff',
+    //   'background:transparent'
+    // )
 
     if (log) {
       router.resolveHooks.push((to, from, next) => {
