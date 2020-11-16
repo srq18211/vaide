@@ -18,7 +18,7 @@ show currentRoute matched files
   // main.js
   import router from './router/index';
   import Vaide from 'vaide'
-  Vue.use(Vaide,router)
+  Vue.use(Vaide,router,{clear:false})
 ```
 
 ---
