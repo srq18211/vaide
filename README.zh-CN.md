@@ -5,7 +5,7 @@
 ---
 
 ## 特征
-显示 当前路由 匹配组件，快速定位文件，提升开发效率
+显示 当前路由 匹配组件
 
 ![tupian](http://xinzejy.cn/assets/img/log.png)
 

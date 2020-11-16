@@ -1,7 +1,7 @@
 English | [简体中文](./README.zh-CN.md)
 
 # Vaide 
-> Vue development aids
+> vue development aide
 ---
 
 ## Features
