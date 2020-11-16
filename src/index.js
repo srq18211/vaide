@@ -13,11 +13,7 @@ export default {
     }
     // Vue.prototype.$vaide =
     create(Vaide, router)
-    const { log,clear } = mergeOptions
-
-    if (clear) {
-      console.clear()
-    }
+    const { log, clear } = mergeOptions
 
     // console.log(
     //   `%c Vaide %c ${'version 2.0.14'} %c`,
@@ -28,6 +24,9 @@ export default {
 
     if (log) {
       router.resolveHooks.push((to, from, next) => {
+        if (clear) {
+          console.clear()
+        }
         var str = ``
         to.matched.forEach(item => {
           str += `【${item.path}】:\n__filePath__: ${item.components.default.__file} \n`
