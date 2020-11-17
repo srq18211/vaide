@@ -5,16 +5,19 @@ export default {
   install: function (Vue, router, options) {
     const defaultConf = {
       log: true,
-      clear: false
+      clear: false,
+      vaide:true
     }
     const mergeOptions = Object.assign(defaultConf, options)
     if (process.env.NODE_ENV !== 'development') {
       return
     }
     // Vue.prototype.$vaide =
-    create(Vaide, router)
-    const { log, clear } = mergeOptions
-
+    
+    const { log, clear, vaide } = mergeOptions
+    if (vaide) {
+      create(Vaide, router)
+    }
     // console.log(
     //   `%c Vaide %c ${'version 2.0.14'} %c`,
     //   'background:#35495e; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',

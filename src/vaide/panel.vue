@@ -19,7 +19,7 @@
       </div>
       <component :is="current" class="devtool-panel-main" />
       <div class="devtool-panel-footer">
-        当前url :
+        location.href :
         <span v-if="route.fullPath">{{ route.fullPath }}</span>
       </div>
     </div>
@@ -38,18 +38,19 @@ export default {
   props: ['visible'],
   data() {
     return {
-      current: 'update',
+      current: 'platform',
       menus: [
         {
           'title': '环境',
           'name': 'platform',
           'key': 'platform'
         },
-        {
-          'title': '页面',
-          'name': 'update',
-          'key': 'update'
-        }],
+        // {
+        //   'title': '页面',
+        //   'name': 'update',
+        //   'key': 'update'
+        // }
+        ],
       route: { fullPath: '' }
     };
   },
@@ -60,6 +61,7 @@ export default {
   },
   mounted() {
     // this.route = this.$route;
+    this.route.fullPath = document.location.href
   }
 };
 </script>

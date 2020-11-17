@@ -32,13 +32,22 @@ export default {
   }
 };
 </script>
-<style scoped>
-* {
-  -moz-user-select: none; /* 火狐 */
-  -webkit-user-select: none; /* webkit浏览器 */
-  -ms-user-select: none; /* IE10 */
-  -khtml-user-select: none; /* 早期浏览器 */
+<style>
+.user-select-text{
+  user-select: text!important;
 }
+</style>
+<style scoped>
+/** {*/
+/*  -moz-user-select: text; !* 火狐 *!*/
+/*  -webkit-user-select: text; !* webkit浏览器 *!*/
+/*  -ms-user-select: text; !* IE10 *!*/
+/*  -khtml-user-select: text; !* 早期浏览器 *!*/
+/*}*/
+*{
+  user-select: none
+}
+
 .appDevTools {
   user-select: none;
   position: fixed;

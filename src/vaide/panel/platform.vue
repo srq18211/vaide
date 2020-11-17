@@ -1,19 +1,30 @@
 <template>
-  <div style="padding:16px">
-    <h2>系统环境</h2>
-    <p v-for="(item, index) in data.env" :key="index">
-      {{ item.label }}：{{ item.value }}
-    </p>
-    <br />
-    <h2>进程管理</h2>
-    <span
-      >开发服务器 pid:{{ data.pid }}
-      <!-- <button class="button" @click="restart">重启</button> -->
-    </span>
+  <div style="padding:40px;overflow-y: scroll;font-size: 14px;color:#008c8c" class="user-select-text">
+    <h2> window.navigator：</h2>
+    <div v-for="(item,key) in data">
+      <div v-if="item.type">
+        {{item.title}}:
+        <p v-for="(i,ik) in item.value" :key="ik">
+          {{i}}
+        </p>
+      </div>
+      <p v-else>{{item.title}}:  {{item.value}}</p>
+    </div>
   </div>
 </template>
 
 <script>
+/**
+ * Check if value is primitive.
+ */
+function isPrimitive (value) {
+  return (
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    typeof value === 'symbol' ||
+    typeof value === 'boolean'
+  )
+}
 // import context from './panel/update/context.js';
 export default {
   name: 'platform',
@@ -21,21 +32,26 @@ export default {
   data() {
     return {
       // context: context
-      data: ''
+      data: []
     };
   },
-  created() {
-    let url = `http://localhost:3000/info`;
-    fetch(url, { mode: 'cors' }).then(res => {
-      res.json().then(data => {
-        this.data = data;
-      });
-    });
-  },
-  methods: {
-    // restart() {
-    //   fetch('http://localhost:3000/restart');
-    // }
+  mounted() {
+    let info = []
+    for (let key in window.navigator){
+      let value = window.navigator[key]
+      if(value ){
+        if(isPrimitive(value)){
+          info.push(
+            {
+              title:key,
+              value:value.toString()
+            }
+          )
+        }
+      }
+
+    }
+    this.data=info
   }
 };
 </script>
