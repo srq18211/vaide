@@ -17,5 +17,13 @@
   },
   "homepage": "https://github.com/srq18211/vaide#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": [
+    "vue",
+    "aide",
+    "vaide",
+    "assist",
+    "aid",
+    "tool"
+  ]
 }
