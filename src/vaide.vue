@@ -55,7 +55,7 @@ export default {
   height: 60px;
   right: 60px;
   bottom: 60px;
-  z-index: 9999;
+  z-index: 10000;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;

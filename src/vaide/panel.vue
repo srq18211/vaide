@@ -69,7 +69,7 @@ export default {
 <style>
 .devtool-masking {
   position: fixed;
-  z-index: 1024;
+  z-index: 9999;
   left: 0;
   top: 0;
   width: 100vw;
