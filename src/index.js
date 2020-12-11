@@ -19,14 +19,14 @@ export default {
     }
 
     if (log) {
-      let route = []
+      
       router.resolveHooks.push((to, from, next) => {
         if (clear) {
           console.clear()
         }
-
+        let route = {}
         to.matched.forEach(item => {
-          route.push({ path: item.path, file: item.components.default.__file })
+          route[item.path]=item.components.default.__file
         })
 
         window.sessionStorage.setItem('currentRoutePath', JSON.stringify(route))
