@@ -29,7 +29,7 @@ export default {
           route[item.path]=item.components.default.__file
         })
 
-        window.sessionStorage.setItem('currentRoutePath', JSON.stringify(route))
+        window.sessionStorage.setItem('route', JSON.stringify(route))
         next()
       })
     }
