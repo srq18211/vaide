@@ -6,7 +6,8 @@ English | [简体中文](./README.zh-CN.md)
 
 ## Features
 show currentRoute matched files 
-![tupian](http://xinzejy.cn/assets/img/log.png)
+show navigation info
+<!-- ![tupian](http://xinzejy.cn/assets/img/log.png) -->
 
 ## Getting Started
 
@@ -18,7 +19,7 @@ show currentRoute matched files
   // main.js
   import router from './router/index';
   import Vaide from 'vaide'
-  Vue.use(Vaide,router,{clear:false})
+  Vue.use(Vaide,router)
 ```
 
 ---

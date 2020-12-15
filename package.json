@@ -1,6 +1,6 @@
 {
   "name": "vaide",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "A programming aid",
   "main": "./dist/main.js",
   "files": [

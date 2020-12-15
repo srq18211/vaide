@@ -5,9 +5,9 @@
 ---
 
 ## 特征
-显示 当前路由 匹配组件
-
-![tupian](http://xinzejy.cn/assets/img/log.png)
+显示 当前路由 匹配组件 快速定位文件位置
+显示 宿主 代理信息
+<!-- ![tupian](http://xinzejy.cn/assets/img/log.png) -->
 
 ## 快速上手
 
