@@ -11,7 +11,10 @@
       <p v-else>{{item.title}}:  {{item.value}}</p>
     </div>
 
-    <h2>matched routes</h2>
+    <div> document.designMode : <button class="button" @click="designMode=!designMode">{{designMode?'on':'off'}}</button> </div>
+    <div> document.dir : <button class="button" @click="dir=!dir">{{dir?'rtl':'ltr'}}</button> </div>
+
+    <h2>路由对应文件地址</h2>
     <div class="route">
       <table style="width:100%" border="0" collapse="true" cellspacing="0" cellpadding="0">
         <thead>
@@ -22,11 +25,17 @@
         <tbody>
           <tr v-for="(item,key) in routeMatched">
             <td class="cell">{{key}}</td>
-            <td class="cell">{{item}}</td>
+            <td class="cell">
+              {{item}}
+            <td class="cell">
+              <input style="opacity:0;width:10px" type="text" :value="item">
+              <span class="button" @click="copy">复制文件地址</span> </td>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
+
   </div>
 </template>
 
@@ -50,8 +59,33 @@ export default {
     return {
       // context: context
       data: [],
-      routeMatched:{}
+      routeMatched:{},
+      designMode:false,
+      dir:false,
     };
+  },
+  watch:{
+    designMode:{
+      handler:function(v){
+        document.designMode = v?'on':'off'
+      },
+      immediate:true,
+    },
+    dir:{
+      handler:function(v){
+        document.dir = v?'rtl':'ltr'
+      },
+      immediate:true,
+    }
+  },
+  methods:{
+    copy(e){
+      // console.log(e.target.previousSibling.textContent);
+      var e = e.target.previousElementSibling; 
+      e.select(); // 选择对象 
+      document.execCommand("Copy"); // 执行浏览器复制命令 
+      console.log('已复制文件路径到剪切板')
+    }
   },
   mounted() {
     let info = []
@@ -84,6 +118,7 @@ export default {
   border: none;
   outline: none;
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .text-align-right{

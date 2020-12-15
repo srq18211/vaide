@@ -13,8 +13,8 @@ export default {
     }
     // Vue.prototype.$vaide =
 
-    const { log, clear, vaide } = mergeOptions
-    if (vaide) {
+    const { log, clear, buoy } = mergeOptions
+    if (buoy) {
       create(Vaide, router)
     }
 
