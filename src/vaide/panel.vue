@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import platform from './panel/platform';
-import update from './panel/update';
+import platform from './panel/platform.vue';
+import update from './panel/update.vue';
 
 export default {
   components: {

@@ -1,11 +1,10 @@
-import create from './create';
+import create from './create.js';
 import Vaide from './vaide.vue';
 
 export default {
   install: function (Vue, router, options) {
     const defaultConf = {
-      log: true,
-      clear: false
+      buoy: true
     }
     const mergeOptions = Object.assign(defaultConf, options)
     if (process.env.NODE_ENV !== 'development') {
@@ -13,25 +12,19 @@ export default {
     }
     // Vue.prototype.$vaide =
 
-    const { log, clear, buoy } = mergeOptions
+    const { clear, buoy } = mergeOptions
     if (buoy) {
       create(Vaide, router)
     }
 
-    if (log) {
-      
-      router.resolveHooks.push((to, from, next) => {
-        if (clear) {
-          console.clear()
-        }
-        let route = {}
-        to.matched.forEach(item => {
-          route[item.path]=item.components.default.__file
-        })
-
-        window.sessionStorage.setItem('route', JSON.stringify(route))
-        next()
+    router.resolveHooks.push((to, from, next) => {
+      let route = {}
+      to.matched.forEach(item => {
+        route[item.path||'/'] = item.components.default.__file
       })
-    }
+
+      window.sessionStorage.setItem('route', JSON.stringify(route))
+      next()
+    })
   }
 }

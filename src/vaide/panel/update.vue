@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import edit from './update/edit';
-import create from './update/create';
+import edit from './update/edit.vue';
+import create from './update/create.vue';
 
 export default {
   components: {
